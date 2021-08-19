@@ -54,6 +54,15 @@ input[type="text"] {
     box-shadow: 0 0 3px 1px black, 0 0 3px 1px black;
 }
 
+#btn:hover {
+    background: #f3ddad;
+    cursor: pointer;
+}
+
+#btn:active {
+    background: #e6c378;;
+}
+
 #output {
     display: flex;
     flex-direction: column;
