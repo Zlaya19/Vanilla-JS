@@ -48,6 +48,7 @@ body {
     border-radius: 4px;
     box-shadow: 0 0 8px 1px #333, 0 0 8px 1px #333;
     margin-bottom: 10px;
+    user-select: none;
 }
 
 input[type="text"] {

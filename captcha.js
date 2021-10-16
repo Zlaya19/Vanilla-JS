@@ -1,10 +1,15 @@
 const captchaDiv = document.getElementById('captchaDiv');
 const btn = document.getElementById('btn');
 let input = document.getElementById('input');
-let output = '';
+
+/*  
+    the window listener starts the unknown function which creates a paragraph element.
+    This paragraph element goes trough five functions which define their look,
+    and this will happend six times because of the for loop at the begin of the function.
+    After any loop, the paragraph will append on the captchaDiv and we will see the result.
+*/
 
     window.addEventListener('load', function(){
-
         
         for(let i = 0; i < 6; i++ ){
             let paragraph = document.createElement('p');
@@ -16,7 +21,10 @@ let output = '';
             paragraph.style.textTransform = BigSmall(); 
             captchaDiv.appendChild(paragraph);
 
-        }  
+        }
+
+    /*  the click listener starts by clicking on the btn button and checks
+        if the input value is the same as the captcha code  */
 
             btn.addEventListener('click', function(){
                 
@@ -26,6 +34,7 @@ let output = '';
             });
     })
     
+//  the functions which defines how the paragraph will look like
 
 function randomLetter(){
     const captchaItems = [1,2,3,4,5,6,7,8,9,0,'a','b','c','d','e','f','u','v','w','x','y','z'];
