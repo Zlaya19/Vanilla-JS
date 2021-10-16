@@ -1,6 +1,7 @@
 const captchaDiv = document.getElementById('captchaDiv');
 const btn = document.getElementById('btn');
 let input = document.getElementById('input');
+let headline = document.getElementById('headline');
 
 /*  
     the window listener starts the unknown function which creates a paragraph element.
@@ -28,8 +29,10 @@ let input = document.getElementById('input');
 
             btn.addEventListener('click', function(){
                 
-                if(input.value === captchaDiv.textContent){
-                    captchaDiv.innerHTML = '<h1>' + "Correct" + '</h1>';
+                if(input.value !== captchaDiv.textContent){
+                    headline.innerHTML = '<h4>' + "wrong code" + '</h4>';
+                }else{
+                    headline.innerHTML = `<h4> correct </h4>`;
                 }
             });
     })
